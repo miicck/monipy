@@ -20,7 +20,7 @@ def main():
     args.padding_x = max(0, args.padding_x)
     args.padding_y = max(0, args.padding_y)
 
-    def divide_span(size: int, divisions: int) -> list[int]:
+    def divide_span(size: int, divisions: int):
         result = [size // divisions] * divisions
         result[-1] += size - sum(result)
         assert sum(result) == size
